@@ -1,15 +1,15 @@
 import os
 
-from flask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    # provider = str(os.environ.get('PROVIDER', 'world'))
-    provider = request.args.get('provider')
-    if not provide:
-        provider = str(os.environ.get('PROVIDER', 'world'))
+    provider = str(os.environ.get('PROVIDER', 'world'))
+    # provider = request.args.get('provider')
+    # if not provide:
+    #     provider = str(os.environ.get('PROVIDER', 'world'))
 
     return 'Hello '+provider+'!'
 
