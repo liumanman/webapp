@@ -1,12 +1,16 @@
 import os
 
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    provider = str(os.environ.get('PROVIDER', 'world'))
+    # provider = str(os.environ.get('PROVIDER', 'world'))
+    provider = request.args.get('provider')
+    if not provide:
+        provider = str(os.environ.get('PROVIDER', 'world'))
+
     return 'Hello '+provider+'!'
 
 if __name__ == '__main__':
