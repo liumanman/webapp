@@ -5,6 +5,7 @@ The Docker Fundamentals repository contains the example Hello World Python WebAp
 
 ## License
 
+
 Apache 2.0
 
 ## Copyright
